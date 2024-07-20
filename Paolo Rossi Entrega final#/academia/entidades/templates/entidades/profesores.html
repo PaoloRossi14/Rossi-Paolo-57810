@@ -1,0 +1,20 @@
+{% extends 'entidades/index.html' %}
+
+{% block contenido %}
+<h1>Profesores</h1>
+
+<ul>
+    {% for profesor in profesores %}
+    <li>
+        <h2>{{ profesor.nombre }}</h2>
+        <p>Edad: {{ profesor.edad }}</p>
+        <p>Horario: {{ profesor.horarios }}</p>
+        <p>Profesión: {{ profesor.profesion }}</p>
+
+
+    </li>
+    {% empty %}
+    <li>No hay profesores disponibles.</li>
+    {% endfor %}
+</ul>
+{% endblock %}
